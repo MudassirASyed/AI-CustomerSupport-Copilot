@@ -12,7 +12,7 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 def answer_question(vectorstore, question):
 
     # retrieve relevant docs
-    docs = vectorstore.similarity_search(question, k=3)
+    docs = vectorstore.similarity_search(question, k=5)  
 
     context = "\n\n".join([doc.page_content for doc in docs])
 
@@ -21,11 +21,16 @@ You are a customer support assistant.
 
 Answer the user's question using ONLY the provided context.
 
-Context:
+CONTEXT (multiple sections from CV):
 {context}
 
-Question:
-{question}
+USER QUESTION: {question}
+
+INSTRUCTIONS:
+1. Search the context for SPECIFIC dates, roles, and durations
+2. If information is spread across multiple sections, COMBINE it
+3. If you find the information, provide it with SPECIFIC details
+4. Only say "no information" if you've thoroughly checked all context
 """
 
     response = client.chat.completions.create(

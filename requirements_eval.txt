@@ -1,0 +1,14 @@
+streamlit
+langchain
+chromadb
+sentence-transformers
+groq
+python-dotenv
+pypdf
+ragas
+datasets
+pandas
+plotly
+bert-score
+rouge-score
+nltk

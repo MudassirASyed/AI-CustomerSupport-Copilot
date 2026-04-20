@@ -1,0 +1,17 @@
+{
+  "metrics": {
+    "total_tests": 5,
+    "passed_tests": 4,
+    "avg_factual_accuracy": 0.7346,
+    "avg_coverage": 0.5696,
+    "hallucination_rate": 0.0,
+    "failed_retrievals": 0,
+    "pass_rate": 0.8
+  },
+  "timestamp": "2026-04-13T23:29:57.821844",
+  "results_summary": {
+    "total_tests": 5,
+    "pass_rate": 0.8,
+    "avg_factual_accuracy": 0.7346
+  }
+}
